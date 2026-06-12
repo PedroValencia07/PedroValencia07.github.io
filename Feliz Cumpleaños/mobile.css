@@ -1,0 +1,134 @@
+/* Evitar resaltado azul y selección */
+*{
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Contenedor principal */
+.contenedor{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Mesa */
+.soporte{
+  width: 90%;
+  max-width: 370px;
+  margin: auto;
+  position: relative;
+}
+
+.soporte::before{
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100vh;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 18px;
+}
+
+.soporte::after{
+  content: "";
+  position: absolute;
+  width: 95px;
+  height: 100vh;
+  left: 85px;
+}
+
+/* Happy Birthday */
+.happy-birthday{
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+/* Objetos */
+.portaretrato,
+.torta,
+.caja,
+.vela,
+.llama{
+  position: absolute;
+}
+
+/* Foto */
+.portaretrato{
+  transform: scale(.75);
+  left: 55%;
+  bottom: -12px;
+}
+
+/* Pastel */
+.torta{
+  transform: scale(.75);
+  left: 50%;
+  bottom: -20px;
+}
+
+/* Regalo */
+.caja{
+  transform: scale(.75);
+  left: 35%;
+  bottom: -26px;
+}
+
+/* Vela */
+.vela{
+  transform: scale(.75);
+  bottom: 94px;
+  left: 52%;
+}
+
+/* Llama */
+.llama{
+  bottom: 160px;
+  left: 52%;
+}
+
+/* Carta */
+.carta{
+  animation: none;
+  transform: scale(.8);
+  transform-origin: center;
+  margin: auto;
+}
+
+/* Pantallas pequeñas */
+@media screen and (max-width: 400px){
+
+  .happy-birthday{
+    font-size: 36px;
+  }
+
+  .portaretrato{
+    transform: scale(.65);
+  }
+
+  .torta{
+    transform: scale(.63);
+  }
+
+  .caja{
+    transform: scale(.65);
+  }
+
+  .vela{
+    transform: scale(.65);
+    bottom: 74px;
+  }
+
+  .llama{
+    bottom: 138px;
+  }
+
+  .carta{
+    transform: scale(.7);
+  }
+
+}
